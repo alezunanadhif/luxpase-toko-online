@@ -23,7 +23,7 @@ class UserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'roles' => 'required|string|in:USER,ADMIN',
+            'roles' => 'required|string|max:255|in:USER,ADMIN',
         ];
     }
 }

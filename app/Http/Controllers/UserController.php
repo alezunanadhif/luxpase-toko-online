@@ -60,7 +60,9 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('pages.dashboard.user.edit', compact('user'));
+        return view('pages.dashboard.user.edit', compact('user'), [
+            'item' => $user
+        ]);
     }
 
     /**
@@ -70,14 +72,16 @@ class UserController extends Controller
     {
         $user->update($request->all());
 
-        return redirect()->route('dashboard.user.index');
+        return redirect()->route('pages.dashboard.user.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect()->route('dashboard.product.index');
     }
 }

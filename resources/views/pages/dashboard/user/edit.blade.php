@@ -5,7 +5,7 @@
             <nav class="flex" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-3">
                     <li class="inline-flex items-center">
-                        <a href="#"
+                        <a href="{{ route('dashboard.user.index') }}"
                             class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
                             <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +74,7 @@
                                 <div class="w-full px-3">
                                     <label
                                         class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Roles</label>
-                                    <select name="status"
+                                    <select name="roles"
                                         class="block w-full bg-gray-200 text-gray-700  border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-none"
                                         id="">
                                         <option value="{{ $user->roles }}">{{ $user->roles }}</option>
@@ -82,15 +82,15 @@
                                         <option value="ADMIN">ADMIN</option>
                                     </select>
                                 </div>
-                                <div class="flex flex-warp -mx-3 mb-6">
-                                    <div class="w-full px-3">
-                                        <button type="submit"
-                                            class="bg-pink-400 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded shadow">Simpan</button>
-                                    </div>
+                            </div>
+                            <div class="flex flex-warp -mx-3 mb-6">
+                                <div class="w-full px-3">
+                                    <button type="submit"
+                                        class="bg-pink-400 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded shadow">Simpan</button>
                                 </div>
                             </div>
                         </div>
-                </form>
+                    </div>
             </div>
         </div>
     </div>

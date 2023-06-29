@@ -18,13 +18,13 @@ class Products extends Model
     ];
 
     /**
-     * Get all of the gallery for the Products
+     * Get all of the galleries for the Products
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function gallery(): HasMany
+    public function galleries(): HasMany
     {
-        return $this->hasMphpany(ProductsGallery::class, 'product_id', 'id');
+        return $this->hasMany(ProductsGallery::class, 'product_id', 'id');
     }
 
     /**

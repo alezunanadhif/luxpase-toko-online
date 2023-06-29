@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 @endif
-                <form action="{{ route('dashboard.transaction.update', $transaction->id) }}" class="w-full" method="POST"
+                {<form action="{{ route('dashboard.transaction.update', $transaction->id) }}" class="w-full" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     @method('patch')
@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>}
                 </form>
             </div>
         </div>
