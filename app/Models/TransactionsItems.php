@@ -10,7 +10,9 @@ class TransactionsItems extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'user_id', 'product_id', 'transaction_id'
+    ]; 
 
     /**
      * Get the product associated with the TransactionsItems

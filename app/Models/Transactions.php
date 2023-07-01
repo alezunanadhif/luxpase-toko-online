@@ -10,7 +10,9 @@ class Transactions extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'user_id', 'name', 'email', 'address', 'telp', 'courier', ' payment', 'payment_url', 'total_price', 'status'
+    ];
 
     /**
      * Get the user that owns the Transactions
