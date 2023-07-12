@@ -77,7 +77,7 @@ class FrontendController extends Controller
         foreach ($carts as $cart) {
             $items[] = TransactionsItems::create([
                 'transaction_id' => $transaction->id,
-                'user_id' => $cart->id,
+                'user_id' => $cart->user_id,
                 'product_id' => $cart->product_id,
             ]);
         }
